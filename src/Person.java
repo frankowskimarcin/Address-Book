@@ -19,13 +19,18 @@ public class Person extends PersonData {
         address = new Address(street, houseNum, apartNum, postcode, postOffice);
     }
 
+    public Person(String name, String surname, String phoneNumber,String street,
+                  String houseNum, String apartNum, String postcode, String postOffice){
+        super(name, surname, phoneNumber);
+        address = new Address(street, houseNum, apartNum, postcode, postOffice);
+    }
+
     @Override
     public String toString() {
-        return "Person:{ " +
+        return "Person: " +
                 "name = '" + name + '\'' +
                 ", surname = '" + surname + '\'' +
-                ", phoneNumber = '" + phoneNumber + '\'' +
-                address.toString() +
-                '}';
+                ", phoneNumber = '" + phoneNumber + '\''+ ' ' +
+                address.toString();
     }
 }

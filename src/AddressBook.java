@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -86,5 +87,34 @@ public class AddressBook {
                 System.out.println(person.toString());
             }
         }
+    }
+
+    public void readData(){
+        String csvFile = "C:/Users/Marcin/IdeaProjects/AddressBook/csv/data.csv";
+        BufferedReader buffer = null;
+        String line ="";
+        try{
+            buffer = new BufferedReader(new FileReader(csvFile));
+            while((line=buffer.readLine())!= null){
+                String[] filePerson = line.split(";");
+                Person newPerson = new Person(filePerson[0],filePerson[1],filePerson[2],filePerson[3],
+                        filePerson[4],filePerson[5],filePerson[6],filePerson[7]);
+                book.add(newPerson);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(buffer != null){
+                try {
+                    buffer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void writeData(){
+
     }
 }
