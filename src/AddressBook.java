@@ -90,7 +90,7 @@ public class AddressBook {
     }
 
     public void readData(){
-        String csvFile = "C:/Users/Marcin/IdeaProjects/AddressBook/csv/data.csv";
+        String csvFile = "./csv/data.csv";
         BufferedReader buffer = null;
         String line ="";
         try{
@@ -114,7 +114,21 @@ public class AddressBook {
         }
     }
 
-    public void writeData(){
-
+    public void writeData() throws IOException {
+        String csvFile = "./csv/data.csv";
+        FileWriter fileWriter = new FileWriter(csvFile);
+        for(Person person : book){
+            fileWriter.append(person.getName()).append(";");
+            fileWriter.append(person.getSurname()).append(";");
+            fileWriter.append(person.getPhoneNumber()).append(";");
+            fileWriter.append(person.address.getStreet()).append(";");
+            fileWriter.append(person.address.getHouseNum()).append(";");
+            fileWriter.append(person.address.getApartNum()).append(";");
+            fileWriter.append(person.address.getPostcode()).append(";");
+            fileWriter.append(person.address.getPostOffice());
+            fileWriter.append("\n");
+        }
+        fileWriter.flush();
+        fileWriter.close();
     }
 }

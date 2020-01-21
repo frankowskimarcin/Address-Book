@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         AddressBook addressBook = new AddressBook();
 
         while(true){
@@ -42,6 +43,9 @@ public class Main {
                     break;
                 case 6:
                     addressBook.readData();
+                    break;
+                case 7:
+                    addressBook.writeData();
                     break;
                 case 8:
                     System.exit(0);
