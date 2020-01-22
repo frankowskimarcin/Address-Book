@@ -26,12 +26,24 @@ public class Main {
                 case 2:
                     System.out.println("Enter surname of a person to remove");
                     String surname = input.nextLine();
-                    addressBook.deletePerson(surname);
+                    System.out.println("Enter name of a person to remove");
+                    String name = input.nextLine();
+                    try {
+                        addressBook.deletePerson(surname, name);
+                    } catch (NoSuchFieldException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 3:
                     System.out.println("Enter surname of a person to modify");
-                    String modification = input.nextLine();
-                    addressBook.modifyPerson(modification);
+                    String mSurname = input.nextLine();
+                    System.out.println("Enter name of a person to modify");
+                    String mName = input.nextLine();
+                    try {
+                        addressBook.modifyPerson(mSurname,mName);
+                    } catch (NoSuchFieldException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 4:
                     addressBook.displayAll();

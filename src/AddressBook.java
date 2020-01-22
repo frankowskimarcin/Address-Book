@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddressBook {
     ArrayList<Person> book;
@@ -22,13 +23,14 @@ public class AddressBook {
         book.add(newPerson);
     }
 
-    public void deletePerson(String surname){
-        book.removeIf(person -> person.getSurname().equals(surname));
+    public void deletePerson(String surname, String name) throws NoSuchFieldException {
+        book.removeIf(person -> person.getSurname().equals(surname) && person.getName().equals(name));
+
     }
 
-    public void modifyPerson(String surname){
+    public void modifyPerson(String surname, String name) throws NoSuchFieldException{
         for (Person person : book){
-            if (person.getSurname().equals(surname)){
+            if (person.getSurname().equals(surname) && person.getName().equals(name)){
                 System.out.println(person.toString());
                 System.out.println("Choose data to modify: ");
                 System.out.println("1- Name, 2- Surname, 3- Phone number, 4- street, " +
@@ -36,6 +38,9 @@ public class AddressBook {
                 Scanner input = new Scanner(System.in);
                 int choice = input.nextInt();
                 input.nextLine();
+                if(choice<1 || choice>=8){
+                    break;
+                }
                 System.out.println("Enter your modification: ");
                 String change = input.nextLine();
                 switch(choice){
@@ -81,12 +86,15 @@ public class AddressBook {
     }
 
     public void search(String surname){
+        AtomicBoolean found = new AtomicBoolean(false);
         for (Person person : book){
             if (person.getSurname().equals(surname)){
+                found.set(true);
                 System.out.println("Person found!");
                 System.out.println(person.toString());
             }
         }
+        if(!found.get()) System.out.println("Person NOT found!");
     }
 
     public void readData(){
