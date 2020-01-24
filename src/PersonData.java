@@ -1,4 +1,5 @@
 public class PersonData {
+    protected Address address;
     protected String name;
     protected String surname;
     protected String phoneNumber;

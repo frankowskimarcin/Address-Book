@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddressBook {
-    ArrayList<Person> book;
+    ArrayList<PersonData> book;
 
     public AddressBook(){
-        book = new ArrayList<Person>();
+        book = new ArrayList<PersonData>();
     }
 
     public void addPerson(){
@@ -19,7 +19,7 @@ public class AddressBook {
         String surname = scanner.nextLine();
         System.out.println("Enter phone number: ");
         String phoneNumber = scanner.nextLine();
-        Person newPerson = new Person(name,surname, phoneNumber);
+        PersonData newPerson = new Person(name,surname, phoneNumber);
         book.add(newPerson);
     }
 
@@ -29,7 +29,7 @@ public class AddressBook {
     }
 
     public void modifyPerson(String surname, String name) throws NoSuchFieldException{
-        for (Person person : book){
+        for (PersonData person : book){
             if (person.getSurname().equals(surname) && person.getName().equals(name)){
                 System.out.println(person.toString());
                 System.out.println("Choose data to modify: ");
@@ -80,14 +80,14 @@ public class AddressBook {
     }
 
     public void displayAll(){
-        for (Person person : book) {
+        for (PersonData person : book) {
             System.out.println(person.toString());
         }
     }
 
     public void search(String surname){
         AtomicBoolean found = new AtomicBoolean(false);
-        for (Person person : book){
+        for (PersonData person : book){
             if (person.getSurname().equals(surname)){
                 found.set(true);
                 System.out.println("Person found!");
@@ -105,7 +105,7 @@ public class AddressBook {
             buffer = new BufferedReader(new FileReader(csvFile));
             while((line=buffer.readLine())!= null){
                 String[] filePerson = line.split(";");
-                Person newPerson = new Person(filePerson[0],filePerson[1],filePerson[2],filePerson[3],
+                PersonData newPerson = new Person(filePerson[0],filePerson[1],filePerson[2],filePerson[3],
                         filePerson[4],filePerson[5],filePerson[6],filePerson[7]);
                 book.add(newPerson);
             }
@@ -125,7 +125,7 @@ public class AddressBook {
     public void writeData() throws IOException {
         String csvFile = "./csv/data.csv";
         FileWriter fileWriter = new FileWriter(csvFile);
-        for(Person person : book){
+        for(PersonData person : book){
             fileWriter.append(person.getName()).append(";");
             fileWriter.append(person.getSurname()).append(";");
             fileWriter.append(person.getPhoneNumber()).append(";");

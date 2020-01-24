@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Person extends PersonData {
 
-    Address address;
+    protected Address address;
 
     public Person(String name, String surname, String phoneNumber) {
         super(name, surname, phoneNumber);
