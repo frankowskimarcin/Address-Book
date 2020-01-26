@@ -1,8 +1,6 @@
 import java.util.Scanner;
 public class Person extends PersonData {
 
-    protected Address address;
-
     public Person(String name, String surname, String phoneNumber) {
         super(name, surname, phoneNumber);
         Scanner input = new Scanner(System.in);

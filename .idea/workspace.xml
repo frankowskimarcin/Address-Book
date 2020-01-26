@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e591b229-a83d-4c6f-b0d4-2d0bfd3ed95d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vpp/AddressBook.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vpp/adressbook.vpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vpp/adressbook.vpp.bak_000f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddressBook.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AddressBook/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBook/AddressBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBook/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBook/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AddressBook/PersonData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBook/PersonData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PersonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersonData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +107,11 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_TABS">
@@ -139,22 +148,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="742" y="155" key="FileChooserDialogImpl/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579888220652" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1579728290119">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1580052172680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579728290119" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1579728290119">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1580052172680" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1580052172680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579728290119" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1579728290119">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1580052172680" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1580052172680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579728290119" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1579728290119">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1580052172680" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1580052172680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579728290119" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1580052172680" />
     <state x="361" y="70" key="PlantUMLSettings" timestamp="1579888454129">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -163,10 +172,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="54" key="SettingsEditor/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579887970461" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1579887747999">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1580034259225">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1579887747999" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.-1080.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1580034259225" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579528117170" />
     <state x="209" y="32" key="new project wizard" timestamp="1579888221408">
       <screen x="0" y="0" width="1536" height="824" />

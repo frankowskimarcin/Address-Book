@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AddressBook {
-    ArrayList<PersonData> book;
+    private ArrayList<PersonData> book;
 
     public AddressBook(){
         book = new ArrayList<PersonData>();
