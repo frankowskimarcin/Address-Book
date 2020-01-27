@@ -7,7 +7,7 @@ public class AddressBook {
     private ArrayList<PersonData> book;
 
     public AddressBook(){
-        book = new ArrayList<PersonData>();
+        book = new ArrayList<>();
     }
 
     public void addPerson() {
@@ -32,9 +32,12 @@ public class AddressBook {
         book.add(newPerson);
     }
 
-    public void deletePerson(String surname, String name) throws NoSuchFieldException {
+    public void deletePerson(String surname, String name){
         book.removeIf(person -> person.getSurname().equals(surname) && person.getName().equals(name));
 
+    }
+    public void deleteAll() {
+        book.clear();
     }
 
     public void modifyPerson(String surname, String name) throws NoSuchFieldException{

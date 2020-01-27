@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -24,16 +25,26 @@ public class Main {
                     addressBook.addPerson();
                     break;
                 case 2:
-                    System.out.println("Enter surname of a person to remove");
-                    String surname = input.nextLine();
-                    System.out.println("Enter name of a person to remove");
-                    String name = input.nextLine();
-                    try {
-                        addressBook.deletePerson(surname, name);
-                    } catch (NoSuchFieldException e) {
+                    System.out.println("If delete all type: true, if only one person type: false ");
+                    boolean toDelete=false;
+                    try{
+                        toDelete = input.nextBoolean();
+                    }catch(InputMismatchException e){
                         e.printStackTrace();
                     }
-
+                    input.nextLine();
+                    if(toDelete) addressBook.deleteAll();
+                    else{
+                        System.out.println("Enter surname of a person to remove");
+                        String surname = input.nextLine();
+                        System.out.println("Enter name of a person to remove");
+                        String name = input.nextLine();
+                        try {
+                            addressBook.deletePerson(surname, name);
+                        } catch (InputMismatchException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
                 case 3:
                     System.out.println("Enter surname of a person to modify");
