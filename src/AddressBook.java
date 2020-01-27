@@ -10,16 +10,25 @@ public class AddressBook {
         book = new ArrayList<PersonData>();
     }
 
-    public void addPerson(){
+    public void addPerson() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Creating new unit");
-        System.out.println("Enter name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter surname: ");
-        String surname = scanner.nextLine();
-        System.out.println("Enter phone number: ");
-        String phoneNumber = scanner.nextLine();
-        PersonData newPerson = new Person(name,surname, phoneNumber);
+        String name = "";
+        String surname = "";
+        String phoneNumber = "";
+        while (name.equals("")) {
+            System.out.println("Enter name: ");
+            name = scanner.nextLine();
+        }
+        while(surname.equals("")){
+            System.out.println("Enter surname: ");
+            surname = scanner.nextLine();
+        }
+        while(phoneNumber.equals("")){
+            System.out.println("Enter phone number: ");
+            phoneNumber = scanner.nextLine();
+        }
+        PersonData newPerson = new Person(name, surname, phoneNumber);
         book.add(newPerson);
     }
 
